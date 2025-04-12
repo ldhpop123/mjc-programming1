@@ -24,7 +24,6 @@ int main() {
     case 4:
         printf("결과는 %d / %d = %d", x, y , x/y);
         break;
-    
     default:
         printf("선택한 메뉴가 존재하지 않습니다.");
         break;
