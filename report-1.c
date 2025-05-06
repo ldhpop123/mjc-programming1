@@ -81,7 +81,9 @@ int main(void) {
     working_M = leftsec / 60;
     working_S = leftsec % 60;
 
+    // =======================
     // 최대인정 근무시간 (base_hour에 저장)
+    // =======================
     if (65 <= age) {
         base_hour = 3;
     } else if (55 <= age) {
@@ -133,7 +135,7 @@ int main(void) {
     if (check_card > card_limit) { // 체크카드
         refund += check_card * CHECK_CARD_RATE;
     }
-    
+
     // 세후 급여액
     after_tax = income_amount - tax + refund;
 
