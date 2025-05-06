@@ -157,8 +157,9 @@ int main(void) {
     } else if (department == 'E') {
         printf(" 연구 및 개발부 ");
     }
-    printf("직원입니다.\n세전 급여액은 %.1f원, 세금은 %.1f원, 환급금은 %.1f원이므로 세후 급여액은 %.1f원입니다.\n",
-        income_amount, tax, refund, after_tax);
+    printf("직원입니다.\n세전 급여액은 %d원, 세금은 %d원, 환급금은 %d원이므로 세후 급여액은 %d원입니다.\n",
+        // 반올림 처리
+        (int)(income_amount + 0.5), (int)(tax + 0.5), (int)(refund + 0.5), (int)(after_tax + 0.5));
 
     return 0;
 }
