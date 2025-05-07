@@ -40,6 +40,11 @@ int main(void) {
     // 입력 + 유효성 검사
     printf("사원번호를 입력해주세요 (두 자리 정수) : ");
     scanf("%d", &employee_num);
+    if (! (0 <= employee_num && employee_num < 100)) {
+        printf("사원번호가 두 자리 정수가 아닙니다");
+        return 1; // 프로그램 종료
+    }
+
     printf("나이를 입력해주세요 : ");
     scanf("%d", &age);
     if (age < 18) { // 18세 미만이라면 고용 불가
@@ -68,10 +73,22 @@ int main(void) {
 
     printf("부양 가족수를 입력해주세요 : ");
     scanf("%d", &family);
+    if (family < 0) {
+        printf("부양 가족수의 값이 이상합니다");
+        return 1; // 프로그램 종료
+    }
     printf("신용카드 사용액을 입력해주세요 : ");
     scanf("%d", &credit_card);
+    if (credit_card < 0) {
+        printf("신용카드 사용액이 음수입니다");
+        return 1; // 프로그램 종료
+    }
     printf("체크카드 사용액을 입력해줴요 : ");
     scanf("%d", &check_card);
+    if (check_card < 0) {
+        printf("신용카드 사용액이 음수입니다");
+        return 1; // 프로그램 종료
+    }
 
     // - processing - 
 
